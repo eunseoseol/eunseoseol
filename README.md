@@ -2,7 +2,7 @@
 - 👀 I’m interested in crypto currency
 - 🌱 I’m currently learning business
 - 💞️ I’m looking to collaborate on zeta.camp
-- 📫 How to reach me through instagram {id = eunseoseol}
+- 📫 How to reach me through email {id = ceo@zeta.camp}
 
 <!---
 eunseoseol/eunseoseol is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
