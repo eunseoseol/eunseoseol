@@ -10,7 +10,8 @@ import { db } from './firebase'; // Firestore 데이터베이스를 임포트합
 import { doc, updateDoc } from "firebase/firestore"; // Firestore의 문서 업데이트 함수를 임포트합니다.
 
 export default function Page() {
-  const { user, googleSignIn } = UserAuth();
+   const { user, googleSignIn, logOut } = UserAuth();
+
   const [loading, setLoading] = useState(true);
 
   const handleSignIn = async () => {
@@ -100,7 +101,13 @@ export default function Page() {
         <img src="/book27.png" alt="Book" style={{ maxWidth: '150px', marginBottom: '20px' }} />
 
 
-  
+  <p className="cursor-pointer" onClick={handleSignOut}>
+ Blue Pill
+</p>
+
+
+
+
       </div>
       
       
