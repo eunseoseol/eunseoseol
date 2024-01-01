@@ -29,48 +29,48 @@ export default function Page() {
   // 이곳에 다른 useEffect 훅들 및 로직 추가...
 
   if (isMobile) {
-    return (
-      <div style={{ position: 'relative', width: '100vw', height: '100vh' }}>
-  
-      <video autoPlay loop muted playsInline style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', objectFit: 'cover', zIndex: -1 }}>
-  
-      <source src="/background.mov" type="video/mp4" />
-    </video>
-  
-  <div style={{ position: 'relative', zIndex: 1, width: '100%', paddingTop: '20px', paddingBottom: '100px', height: 'calc(100vh - 20px)',  display: 'flex', flexDirection: 'column', alignItems: 'flex-start', alignItems: 'center' }}>
-  
+
+  return (
+    <div style={{ position: 'relative', width: '100vw', height: '100vh' }}>
+
+    <video autoPlay loop muted playsInline style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', objectFit: 'cover', zIndex: -1 }}>
+
+    <source src="/background.mov" type="video/mp4" />
+  </video>
+
+<div style={{ position: 'relative', zIndex: 1, width: '100%', paddingTop: '20px', paddingBottom: '100px', height: 'calc(100vh - 20px)', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', alignItems: 'center' }}>
+
+    
+          <main className="p-4" style={{ height: '100vh' }}>
+
+        {/* 사용자가 로그인되어 있으면 Welcome 메시지를 표시하고, 그렇지 않으면 Home Page를 표시합니다. */}
+        <div style={{ position: 'relative', zIndex: 1, paddingBottom: '40px', height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center',marginTop: '-50px' // Move the whole block up by 50px
+}}>
+
+<a   href="https://medium.com/@eunseoseol"
+          >
+            <img src="/book.png" alt="Book" style={hoverStyle} />
+          </a>
+
+       
+          <div style={{ paddingBottom: '0px' }}>
       
-            <main className="p-4" style={{ height: '100vh' }}>
-  
-          {/* 사용자가 로그인되어 있으면 Welcome 메시지를 표시하고, 그렇지 않으면 Home Page를 표시합니다. */}
-          <div style={{ position: 'relative', zIndex: 1, paddingBottom: '40px', height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center',marginTop: '-50px' // Move the whole block up by 50px
-  }}>
-  
-  <a   href="https://medium.com/@eunseoseol"
-            >
-              <img src="/book.png" alt="Book" style={mobilehoverStyle} />
-            </a>
-  
-      
-           
-          {/* book1.png on the left */}
-         
+
+          </div>
+
         
-           
-  
-          
-  
-          
-  
-        </div>
-       
-        </main>
-       
+
+        
+
       </div>
-  
-      </div>
-  
-    );
+     
+      </main>
+     
+    </div>
+
+    </div>
+
+  );
   }
 
   return (
