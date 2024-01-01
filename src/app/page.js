@@ -51,13 +51,7 @@ export default function Page() {
               <img src="/book.png" alt="Book" style={mobilehoverStyle} />
             </a>
   
-            <h1 style={{ fontSize: '16px', fontWeight: 'bold', color: 'white' }}>
-            Galactic Empire
-            </h1>
-            <h1 style={{ fontSize: '16px', fontWeight: 'bold', color: 'white' }}>
-       Respect and enjoy the peace
-
-            </h1>
+      
            
           {/* book1.png on the left */}
          
@@ -101,13 +95,7 @@ export default function Page() {
             <img src="/book.png" alt="Book" style={hoverStyle} />
           </a>
 
-          <h1 style={{ fontSize: '48px', fontWeight: 'bold', color: 'white' }}>
-         Galactic Empire
-          </h1>
-          <h1 style={{ fontSize: '48px', fontWeight: 'bold', color: 'white' }}>
-      Respect and enjoy the peace
-        
-          </h1>
+       
           <div style={{ paddingBottom: '40px' }}>
       
 
