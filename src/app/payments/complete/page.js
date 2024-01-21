@@ -70,7 +70,25 @@ function Page() {
     <video autoPlay loop muted playsInline style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', objectFit: 'cover', zIndex: -1 }}>
       <source src="/background.mov" type="video/mp4" />
     </video>
-      <button onClick={updateCitizenship}>Get Citizenship</button>
+
+      <div style={{
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: '100vh'
+}}>
+  <img src="/book0.png" alt="Book" style={{ maxWidth: '150px', marginBottom: '20px' }} />
+  <button onClick={updateCitizenship}>Get Citizenship</button>
+
+
+  <footer style={{ textAlign: 'center', marginTop: '0px', padding: '10px', fontSize: '14px', color: 'white' }}>
+
+<p>Copyright ⓒ Stark Industries. All Rights Reserved</p>
+<p>248-27-01947 | Eunseo Seol | +82 010-3839-7911 | 39-26, Pungyeong-ro 170beon-gil, Gwangsan-gu, Gwangju, Republic of Korea</p>
+</footer>
+  </div>
+
     </div>
   );
 }

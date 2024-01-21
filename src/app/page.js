@@ -91,14 +91,14 @@ export default function Page() {
   };
 
   return (
-    <div style={{ position: 'relative', width: '100vw', height: '100vh' }}>
+    <div style={{ position: 'relative', width: '100vw', height: '100vh',overflowY: 'scroll' }}>
       <video autoPlay loop muted playsInline style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', objectFit: 'cover', zIndex: -1 }}>
         <source src="/background.mov" type="video/mp4" />
       </video>
       {isLoggedIn ? (
         <>
           {isCitizenshipTrue ? (
-            <div style={{ position: 'relative', zIndex: 1, width: '100%', paddingTop: '20px', height: 'calc(100vh - 20px)', overflowY: 'scroll', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <div style={{ position: 'relative', zIndex: 1, width: '100%', paddingTop: '20px', height: 'calc(100vh - 20px)', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <img src="/book0.png" alt="Book" style={{ maxWidth: '150px', marginBottom: '20px' }} />
          <img src="/book1.png" alt="Book" style={{ maxWidth: '150px', marginBottom: '20px' }} />
          <img src="/book2.png" alt="Book" style={{ maxWidth: '150px', marginBottom: '20px' }} />
@@ -127,16 +127,50 @@ export default function Page() {
          <img src="/book25.png" alt="Book" style={{ maxWidth: '150px', marginBottom: '20px' }} />
          <img src="/book26.png" alt="Book" style={{ maxWidth: '150px', marginBottom: '20px' }} />
          <img src="/book27.png" alt="Book" style={{ maxWidth: '150px', marginBottom: '20px' }} />
+         <footer style={{ textAlign: 'center', marginTop: '0px', padding: '10px', fontSize: '14px', color: 'white' }}>
+         <button onClick={handleLogout}>Blue Pill</button>
+
+<p>Copyright ⓒ Stark Industries. All Rights Reserved</p>
+<p>248-27-01947 | Eunseo Seol | +82 010-3839-7911 | 39-26, Pungyeong-ro 170beon-gil, Gwangsan-gu, Gwangju, Republic of Korea</p>
+</footer>
+
        </div>
 
           ) : (
-            <button onClick={handleClick}>It from bit</button>
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              height: '100vh'
+            }}>
+                <img src="/book0.png" alt="Book" style={{ maxWidth: '150px', marginBottom: '20px' }} />
+
+            <button onClick={handleClick}>Continue</button>
+            </div>
+
           )}
-          <button onClick={handleLogout}>Blue Pill</button>
         </>
       ) : (
-        <button onClick={handleGoogleLogin}>Red Pill</button>
+
+<div style={{
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: '100vh'
+}}>
+  <img src="/book0.png" alt="Book" style={{ maxWidth: '150px', marginBottom: '20px' }} />
+  <button onClick={handleGoogleLogin}>Red Pill</button>
+  <footer style={{ textAlign: 'center', marginTop: '0px', padding: '10px', fontSize: '14px', color: 'white' }}>
+
+<p>Copyright ⓒ Stark Industries. All Rights Reserved</p>
+<p>248-27-01947 | Eunseo Seol | +82 010-3839-7911 | 39-26, Pungyeong-ro 170beon-gil, Gwangsan-gu, Gwangju, Republic of Korea</p>
+</footer>
+</div>
+
       )}
+          
     </div>
   );
 }
