@@ -30,7 +30,7 @@ export default function Page() {
     Threads: "https://threads.net/@eunseoseol",
     GitHub: "https://github.com/eunseoseol",
 
-    Youtube: "https://www.youtube.com/@eunseoseol",
+    YouTube: "https://www.youtube.com/@eunseoseol",
     Pinterest: "https://pin.it/N12ZpAT",
     TikTok: "https://www.tiktok.com/@eunseo.seol?_t=8iibwwacOG2&_r=1",
     Instagram: "https://www.instagram.com/eunseoseol?igsh=MWEwYjZla2JldDE4dQ%3D%3D&utm_source=qr",
@@ -38,7 +38,7 @@ export default function Page() {
 
     Mastodon: "https://me.dm/@eunseoseol",
 
-    Paypal: "https://paypal.me/eunseoseol",
+    PayPal: "https://paypal.me/eunseoseol",
     LinkedIn: "https://www.linkedin.com/in/eunseoseol?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
 
 
