@@ -19,9 +19,9 @@ export default function Page() {
     const isAppleDevice = /iphone|ipad|ipod|macintosh/.test(userAgent);
 
     if (isAppleDevice) {
-      setStoreUrl("https://www.youtube.com/@eunseoseol");
+      setStoreUrl("https://www.youtube.com/@eunseoseol?sub_confirmation=1");
     } else {
-         setStoreUrl("https://www.youtube.com/@eunseoseol");
+         setStoreUrl("https://www.youtube.com/@eunseoseol?sub_confirmation=1");
 
     }
 
