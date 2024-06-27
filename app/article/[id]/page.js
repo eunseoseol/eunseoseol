@@ -5,6 +5,7 @@ import { db } from './../../firebase';
 import Link from 'next/link';
 import { formatDistanceToNow } from 'date-fns';
 import { UserAuth } from "./../../context/AuthContext";
+import Navbar from "../../components/Navbar";  // Navbar 컴포넌트 import
 
 const Article = ({ params }) => {
   const { id } = params;
@@ -123,8 +124,10 @@ const Article = ({ params }) => {
   const readTime = calculateReadTime(article.content);
 
   return (
-    <main className="p-4">
-      <div className="content-container">
+    <main className="p-4" style={{ paddingLeft: '300px', paddingRight: '300px' }}>
+      <Navbar />
+
+      <div className="content-container mt-20"> {/* marginTop to adjust for fixed navbar */}
         <div className="mb-4">
           <div className="flex items-center">
             {authorInfo.profileImage ? (

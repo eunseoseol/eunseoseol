@@ -28,6 +28,14 @@ body {
 .selected-image {
   border: 2px solid green;
 }
+.horizontal {
+  display: flex;
+  gap: 10px;
+}
+
+.horizontal-item {
+  flex: 1;
+}
 
 /* styles/globals.css */
 .content-container {

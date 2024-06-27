@@ -13,8 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <AuthContextProvider>
-          <Navbar />
-          {children}
+           {children}
         </AuthContextProvider>
       </body>
     </html>

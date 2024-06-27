@@ -1,33 +1,23 @@
-import { useRouter } from "next/router";
-import { Inter } from "next/font/google";
-import "../globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+// pages/index.js
+import Head from 'next/head';
 
 export default function Home() {
-  const router = useRouter();
-
-  const navigateToCommunity = () => {
-    router.push("/community");
-  };
-
-  const navigateToStudio = () => {
-    router.push("/studio");
-  };
-
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", flexDirection: "column" }}>
-          <h1>Welcome to the Home Page</h1>
-          <button onClick={navigateToCommunity} style={{ margin: "10px", padding: "10px 20px", fontSize: "16px" }}>
-            ES Community
-          </button>
-          <button onClick={navigateToStudio} style={{ margin: "10px", padding: "10px 20px", fontSize: "16px" }}>
-            ES Studio
-          </button>
-        </div>
-      </body>
-    </html>
+    <>
+      <Head>
+        <title>Home Page - Your Site Title</title>
+        <meta property="og:title" content="Home Page - Your Site Title" />
+        <meta property="og:description" content="Description of your home page" />
+        <meta property="og:image" content="https://example.com/home-page-image.jpg" />
+        <meta property="og:url" content="https://edith3141.com" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Home Page - Your Site Title" />
+        <meta name="twitter:description" content="Description of your home page" />
+        <meta name="twitter:image" content="https://example.com/home-page-image.jpg" />
+      </Head>
+      <div>
+        {/* Your page content */}
+      </div>
+    </>
   );
 }

@@ -8,6 +8,7 @@ import Spinner from "../components/Spinner";
 import Link from 'next/link';
 import { formatDistanceToNow } from 'date-fns'; 
 import { FiEdit, FiTrash2, FiEdit3 } from 'react-icons/fi';
+import Navbar from "../components/Navbar";  // Navbar 컴포넌트 import
 
 const Page = () => {
   const { user } = UserAuth();
@@ -156,12 +157,17 @@ const Page = () => {
   };
 
   return (
-    <div className="content-container">
+
+<div className="content-container">
+
       <div className="p-4">
+      <Navbar />
+
         {loading ? (
           <Spinner />
         ) : user ? (
           <div>
+
             <div className="flex items-center mb-4">
               {profilePic ? (
                 <img
@@ -202,56 +208,58 @@ const Page = () => {
               </button>
             </div>
             {activeTab === 'articles' && (
-              <div className="articles">
+              <div className="articles flex flex-wrap -mx-4">
                 {articles.map(article => (
-                  <Link key={article.id} href={`/article/${article.id}`} legacyBehavior>
-                    <a className="block border p-4 mb-4 cursor-pointer hover:bg-gray-100 transition-colors duration-200 rounded-lg">
-                      {extractFirstImage(article.content) && (
-                        <div className="mb-4">
-                          <img src={extractFirstImage(article.content)} alt={article.title} className="w-full h-auto rounded-lg" />
-                        </div>
-                      )}
-                      <div className="flex items-center mb-4">
-                        {article.authorProfileImage ? (
-                          <img
-                            src={article.authorProfileImage}
-                            alt="Profile"
-                            className="w-8 h-8 rounded-full mr-2"
-                          />
-                        ) : (
-                          <div className="w-8 h-8 rounded-full bg-gray-500 text-white flex items-center justify-center mr-2">
-                            {article.authorName.slice(0, 2)}
+                  <div key={article.id} className="w-full md:w-1/3 px-4 mb-4">
+                    <Link href={`/article/${article.id}`} legacyBehavior>
+                      <a className="block border p-4 mb-4 cursor-pointer hover:bg-gray-100 transition-colors duration-200 rounded-lg">
+                        {extractFirstImage(article.content) && (
+                          <div className="mb-4">
+                            <img src={extractFirstImage(article.content)} alt={article.title} className="w-full h-auto rounded-lg" />
                           </div>
                         )}
-                        <div className="text-sm text-gray-500">
-                          <p className="font-bold">{article.authorName}</p>
-                          <p>{calculateReadTime(article.content)} min read • {formatDistanceToNow(new Date(article.createdAt.toDate()))} 전</p>
+                        <div className="flex items-center mb-4">
+                          {article.authorProfileImage ? (
+                            <img
+                              src={article.authorProfileImage}
+                              alt="Profile"
+                              className="w-8 h-8 rounded-full mr-2"
+                            />
+                          ) : (
+                            <div className="w-8 h-8 rounded-full bg-gray-500 text-white flex items-center justify-center mr-2">
+                              {article.authorName.slice(0, 2)}
+                            </div>
+                          )}
+                          <div className="text-sm text-gray-500">
+                            <p className="font-bold">{article.authorName}</p>
+                            <p>{calculateReadTime(article.content)} min read • {formatDistanceToNow(new Date(article.createdAt.toDate()))} 전</p>
+                          </div>
                         </div>
-                      </div>
-                      <h2 className="text-xl font-bold mb-2">{article.title}</h2>
-                      <p className="mb-4">{extractPreviewText(article.content)}</p>
-                      <div className="flex space-x-2">
-                        <Link href={`/edit/${article.id}`} legacyBehavior>
-                          <a
-                            onClick={(e) => e.stopPropagation()}
-                            className="bg-green-500 text-white p-2 rounded flex items-center"
+                        <h2 className="text-xl font-bold mb-2">{article.title}</h2>
+                        <p className="mb-4">{extractPreviewText(article.content)}</p>
+                        <div className="flex space-x-2">
+                          <Link href={`/edit/${article.id}`} legacyBehavior>
+                            <a
+                              onClick={(e) => e.stopPropagation()}
+                              className="bg-green-500 text-white p-2 rounded flex items-center"
+                            >
+                              <FiEdit />
+                            </a>
+                          </Link>
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              e.preventDefault();
+                              handleDelete(article.id);
+                            }}
+                            className="bg-red-500 text-white p-2 rounded flex items-center"
                           >
-                            <FiEdit />
-                          </a>
-                        </Link>
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            e.preventDefault();
-                            handleDelete(article.id);
-                          }}
-                          className="bg-red-500 text-white p-2 rounded flex items-center"
-                        >
-                          <FiTrash2 />
-                        </button>
-                      </div>
-                    </a>
-                  </Link>
+                            <FiTrash2 />
+                          </button>
+                        </div>
+                      </a>
+                    </Link>
+                  </div>
                 ))}
               </div>
             )}
