@@ -1,4 +1,6 @@
 "use client"; // 클라이언트 컴포넌트로 지정
+
+
 import { useState, useEffect } from 'react';
 import { collection, getDocs, query, orderBy, doc, getDoc, updateDoc, arrayUnion } from 'firebase/firestore';
 import { db } from './../../firebase';
@@ -124,7 +126,15 @@ const Article = ({ params }) => {
   const readTime = calculateReadTime(article.content);
 
   return (
-    <main className="p-4" style={{ paddingLeft: '300px', paddingRight: '300px' }}>
+    <main className="p-4 lg:px-72">
+      <style jsx>{`
+        @media (max-width: 768px) {
+          main {
+            padding-left: 16px;
+            padding-right: 16px;
+          }
+        }
+      `}</style>
       <Navbar />
 
       <div className="content-container mt-20"> {/* marginTop to adjust for fixed navbar */}

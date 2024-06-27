@@ -15,14 +15,13 @@ export default function Home() {
   const [category, setCategory] = useState('전체');
   const [loading, setLoading] = useState(true); // 로딩 상태 추가
   const [categoryCounts, setCategoryCounts] = useState({
-    '전체': 0,
-    '🦄 스타트업': 0,
+     '🦄 스타트업': 0,
     '🤖 인공지능': 0,
     '📈 미국주식': 0,
     '🪙 암호화폐': 0,
   });
 
-  const categories = ['전체', '🦄 스타트업', '🤖 인공지능', '📈 미국주식', '🪙 암호화폐'];
+  const categories = ['🦄 스타트업', '🤖 인공지능', '📈 미국주식', '🪙 암호화폐'];
   const categoryIcons = {
     '스타트업': '🦄 스타트업',
     '인공지능': '🤖 인공지능',
@@ -50,8 +49,7 @@ export default function Home() {
 
       const articlesData = [];
       const counts = {
-        '전체': 0,
-        '🦄 스타트업': 0,
+         '🦄 스타트업': 0,
         '🤖 인공지능': 0,
         '📈 미국주식': 0,
         '🪙 암호화폐': 0,
@@ -157,21 +155,21 @@ export default function Home() {
     <>
       <Navbar onSearch={handleSearch} />
       <main className="p-4 flex flex-col lg:flex-row h-screen">
-        {/* Sidebar for categories */}
-        <div className="w-full lg:w-1/4 p-4">
-          <ul className="space-y-2">
-            {categories.map((cat) => (
-              <li key={cat} className="flex justify-between items-center">
-                <button
-                  className={`block text-left p-2 rounded ${category === cat ? 'bg-gray-200 font-bold' : 'bg-gray-100'}`}
-                  onClick={() => setCategory(cat)}
-                >
-                  {cat} ({categoryCounts[cat]})
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
+      {/* Sidebar for categories */}
+      <div className="w-full lg:w-1/4 p-4">
+        <ul className="flex flex-row lg:flex-col space-x-2 lg:space-x-0 lg:space-y-2">
+          {categories.map((cat) => (
+            <li key={cat} className="flex justify-between items-center">
+              <button
+                className={`block text-left p-2 rounded ${category === cat ? 'bg-gray-200 font-bold' : 'bg-gray-100'}`}
+                onClick={() => setCategory(cat)}
+              >
+                {cat} ({categoryCounts[cat]})
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
 
         {/* Articles Section */}
         <div className="w-full lg:w-2/4 p-4 overflow-y-auto">
@@ -217,35 +215,35 @@ export default function Home() {
           )}
         </div>
 
-        {/* Top Articles Section */}
-        <div className="w-full lg:w-1/4 p-4">
-          <h2 className="text-lg font-bold mb-4">🚀 트렌딩 아티클</h2>
-          <ul className="space-y-2">
-            {topArticles.map((article, index) => (
-              <li key={article.id} className="flex items-center">
-                <span className="text-xl mr-2">{index + 1}</span>
-                <Link href={`/article/${article.id}`} legacyBehavior>
-                  <a className="flex-1 block text-sm text-left cursor-pointer hover:bg-gray-100 transition-colors duration-300 rounded-lg p-2">
-                    <div className="flex items-center">
-                      {extractFirstImage(article.content) && (
-                        <img
-                          src={extractFirstImage(article.content)}
-                          alt={article.title}
-                          className="w-20 h-20 object-cover rounded-lg mr-4"
-                        />
-                      )}
-                      <div className="text-sm text-gray-500 flex-1">
-                        <p className="font-bold">{article.authorName}님의 #{article.categoryNames}</p>
-                        <p className="truncate">{article.title}</p>
-                        <p className="mt-1">{extractPreviewText2(article.content)}</p>
-                      </div>
+         {/* Top Articles Section */}
+         <div className="hidden lg:block w-full lg:w-1/4 p-4">
+        <h2 className="text-lg font-bold mb-4">🚀 트렌딩 아티클</h2>
+        <ul className="space-y-2">
+          {topArticles.map((article, index) => (
+            <li key={article.id} className="flex items-center">
+              <span className="text-xl mr-2">{index + 1}</span>
+              <Link href={`/article/${article.id}`} legacyBehavior>
+                <a className="flex-1 block text-sm text-left cursor-pointer hover:bg-gray-100 transition-colors duration-300 rounded-lg p-2">
+                  <div className="flex items-center">
+                    {extractFirstImage(article.content) && (
+                      <img
+                        src={extractFirstImage(article.content)}
+                        alt={article.title}
+                        className="w-20 h-20 object-cover rounded-lg mr-4"
+                      />
+                    )}
+                    <div className="text-sm text-gray-500 flex-1">
+                      <p className="font-bold">{article.authorName}님의 #{article.categoryNames}</p>
+                      <p className="truncate">{article.title}</p>
+                      <p className="mt-1">{extractPreviewText(article.content)}</p>
                     </div>
-                  </a>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+                  </div>
+                </a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
       </main>
     </>
   );
