@@ -249,8 +249,9 @@ a {
   position: relative;
   display: grid;
   grid-column: span 2;
-  grid-row: span 2;
-  min-height: 128px;
+  grid-row: span 1;
+  aspect-ratio: 1;
+  min-height: 0;
   padding: 14px;
   align-content: center;
   justify-items: center;
