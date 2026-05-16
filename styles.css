@@ -284,11 +284,12 @@ a {
   white-space: nowrap;
 }
 
-.facetime-app {
-  background: linear-gradient(180deg, #61ed75, #11bf45);
+.threads-app {
+  background: #050505;
 }
 
-.facetime-app svg,
+.threads-app svg,
+.instagram-app svg,
 .mail-app svg,
 .youtube-app svg,
 .phone-app svg {
@@ -353,18 +354,10 @@ a {
 .p7 { background: #af52de; transform: translate(-50%, -34px) rotate(270deg); }
 .p8 { background: #ff2d55; transform: translate(-50%, -34px) rotate(315deg); }
 
-.camera-app {
+.instagram-app {
   background:
-    radial-gradient(circle at 50% 50%, #0d1322 0 16%, #2b5a95 17% 27%, #0d1322 28% 36%, transparent 37%),
-    radial-gradient(circle at 47% 43%, #f2fbff 0 6%, transparent 8%),
-    linear-gradient(145deg, #e8eef7, #1e2740 44%, #0b1122);
-}
-
-.camera-app span {
-  width: 25px;
-  aspect-ratio: 1;
-  border: 4px solid rgba(255, 255, 255, 0.9);
-  border-radius: 50%;
+    radial-gradient(circle at 22% 98%, #ffd76a 0 18%, #ff9b35 31%, transparent 55%),
+    linear-gradient(145deg, #405de6 0%, #833ab4 28%, #e1306c 58%, #fd1d1d 100%);
 }
 
 .x-app {
