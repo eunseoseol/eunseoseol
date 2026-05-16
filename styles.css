@@ -439,6 +439,16 @@ a {
   line-height: 1;
 }
 
+.notion-app {
+  color: #111;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1;
+}
+
 .github-app {
   background: linear-gradient(180deg, #151b22, #020407);
 }
