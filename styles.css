@@ -463,6 +463,11 @@ a {
   background: linear-gradient(180deg, #6df679, #21c856);
 }
 
+.message-app svg {
+  width: 82%;
+  height: 82%;
+}
+
 .music-app {
   background: #fff;
 }
