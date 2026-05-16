@@ -245,6 +245,61 @@ a {
   clip: rect(0 0 0 0);
 }
 
+.slack-widget {
+  position: relative;
+  display: grid;
+  grid-column: span 2;
+  grid-row: span 2;
+  min-height: 128px;
+  padding: 14px;
+  align-content: center;
+  justify-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 70% 24%, rgba(102, 34, 116, 0.36), transparent 36%),
+    linear-gradient(145deg, #4a2458 0%, #210020 100%);
+  border-radius: 22px;
+  box-shadow: 0 9px 22px rgba(0, 0, 0, 0.22);
+}
+
+.slack-widget .widget-name {
+  position: absolute;
+  right: 0;
+  bottom: -25px;
+  left: 0;
+}
+
+.nextgen-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: grid;
+  width: 34px;
+  aspect-ratio: 1;
+  place-items: center;
+  color: #151515;
+  background: #fff;
+  border-radius: 9px;
+  font-size: 6px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+}
+
+.sprout-mark {
+  margin-bottom: 7px;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.slack-message {
+  max-width: 126px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.15;
+  text-align: center;
+}
+
 .app-link {
   display: grid;
   justify-items: center;
