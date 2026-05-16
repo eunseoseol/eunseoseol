@@ -431,6 +431,17 @@ a {
   background: #fff;
 }
 
+.forbes-app {
+  color: #fff;
+  background:
+    radial-gradient(circle at 28% 16%, rgba(255, 255, 255, 0.12), transparent 28%),
+    linear-gradient(145deg, #2c2c2c, #020202);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1;
+}
+
 .github-app {
   background: linear-gradient(180deg, #151b22, #020407);
 }
