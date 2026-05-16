@@ -424,8 +424,10 @@ a {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 12px;
+  justify-self: center;
+  width: min(156px, calc(100% - 34px));
   margin: 0 17px 17px;
   padding: 10px;
   background: rgba(255, 255, 255, 0.2);
@@ -454,11 +456,6 @@ a {
   background: linear-gradient(180deg, #61ef65, #16b53b);
 }
 
-.safari-app {
-  color: #0c5eae;
-  background: linear-gradient(180deg, #fff, #d9f3ff);
-}
-
 .message-app {
   background: linear-gradient(180deg, #6df679, #21c856);
 }
@@ -468,11 +465,11 @@ a {
   height: 82%;
 }
 
-.music-app {
+.ytmusic-app {
   background: #fff;
 }
 
-.music-app svg {
+.ytmusic-app svg {
   width: 84%;
   height: 84%;
 }
