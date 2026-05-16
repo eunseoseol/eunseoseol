@@ -6,7 +6,7 @@
     <title>Eunseo Seol</title>
     <meta
       name="description"
-      content="설은서의 개인 웹사이트. NextGen, 크리에이터 이코노미, 디지털 미디어, 운영 시스템, 읽고 있는 책과 생각을 담았습니다."
+      content="설은서의 개인 웹사이트. 커리어, 책장, 소셜 링크를 iPhone 홈 화면처럼 정리했습니다."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,219 +16,153 @@
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
-    <header class="site-header" data-elevated="false">
-      <a class="brand" href="#top" aria-label="Eunseo Seol home">
-        <span class="brand-mark">ES</span>
-        <span>설은서</span>
-      </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#top">Home</a>
-        <a href="#reading">Library</a>
-      </nav>
-    </header>
+  <body class="home-screen">
+    <main class="iphone-stage" aria-labelledby="home-title">
+      <section class="iphone-shell" aria-label="Eunseo iPhone home screen">
+        <div class="iphone-hardware">
+          <div class="iphone-display">
+            <div class="status-bar" aria-hidden="true">
+              <span>9:41</span>
+              <div class="status-icons">
+                <span class="signal-bars"></span>
+                <span class="wifi-mark"></span>
+                <span class="battery-mark"></span>
+              </div>
+            </div>
+            <div class="dynamic-island" aria-hidden="true"></div>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">Venture Partner at Primer · Former EO Studio Content PD</p>
-          <h1 id="hero-title">Eunseo Seol</h1>
-          <p class="hero-summary">Creator(Software) is Eating the World.</p>
-          <div class="social-dock" aria-label="Eunseo social links">
-            <a class="tile avatar-tile" href="#work" aria-label="Profile">
-              <span>ES</span>
-            </a>
-            <a class="tile dark-tile" href="https://threads.net/@eunseoseol" target="_blank" rel="noreferrer" aria-label="Threads">
-              <svg class="social-icon threads-icon" viewBox="0 0 64 64" aria-hidden="true">
-                <path d="M41.5 27.5c-.9-6.1-4.4-9.3-10.4-9.3-5.1 0-9 2.4-11.3 6.8" />
-                <path d="M43.4 34.9c4.2 1.6 6.5 4.6 6.5 8.3 0 6.9-6.9 11.9-17 11.9-11.6 0-18.9-8.5-18.9-22 0-13.6 7.2-22.1 18.5-22.1 9.7 0 15.9 5.4 18 15.4" />
-                <path d="M42.2 33.1c-.5 8.1-5 12.8-12.2 12.8-5.4 0-9-2.9-9-7.1 0-4.3 3.7-6.9 9.9-6.9 4 0 8 .6 11.3 1.2Z" />
-              </svg>
-            </a>
-            <a class="tile app-tile" href="https://linkedin.com/in/eunseo-seol" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-              <svg class="app-icon linkedin-app-icon" viewBox="0 0 512 512" aria-hidden="true">
-                <rect width="512" height="512" rx="34" fill="#0a66c2" />
-                <circle cx="107" cy="106" r="45" fill="#fff" />
-                <path d="M67 187h81v260H67V187Zm128 0h78v35h1c11-20 38-41 78-41 84 0 99 55 99 127v139h-81V324c0-29-.5-67-41-67-41 0-47 32-47 65v125h-87V187Z" fill="#fff" />
-              </svg>
-            </a>
-            <a class="tile sky-tile" href="https://x.com/eunseo_seol" target="_blank" rel="noreferrer" aria-label="X">
-              <span>X</span>
-            </a>
-            <a class="tile mail-tile" href="mailto:seoleunseo@nextgen.kr" aria-label="Email">
-              <span>@</span>
-            </a>
-            <a class="tile app-tile" href="https://instagram.com/eunseoseol" target="_blank" rel="noreferrer" aria-label="Instagram">
-              <svg class="app-icon instagram-app-icon" viewBox="0 0 512 512" aria-hidden="true">
-                <defs>
-                  <radialGradient id="instagram-yellow" cx="22%" cy="98%" r="72%">
-                    <stop offset="0" stop-color="#ffd76a" />
-                    <stop offset="0.28" stop-color="#ff9b35" />
-                    <stop offset="0.62" stop-color="#f53366" stop-opacity="0" />
-                  </radialGradient>
-                  <linearGradient id="instagram-gradient" x1="80" y1="18" x2="440" y2="492" gradientUnits="userSpaceOnUse">
-                    <stop offset="0" stop-color="#405de6" />
-                    <stop offset="0.34" stop-color="#833ab4" />
-                    <stop offset="0.64" stop-color="#e1306c" />
-                    <stop offset="1" stop-color="#fd1d1d" />
-                  </linearGradient>
-                </defs>
-                <rect width="512" height="512" rx="108" fill="url(#instagram-gradient)" />
-                <rect width="512" height="512" rx="108" fill="url(#instagram-yellow)" />
-                <rect x="88" y="88" width="336" height="336" rx="94" fill="none" stroke="#fff" stroke-width="36" />
-                <circle cx="256" cy="256" r="74" fill="none" stroke="#fff" stroke-width="36" />
-                <circle cx="352" cy="160" r="23" fill="#fff" />
-              </svg>
-            </a>
-            <a class="tile books-tile" href="/book" aria-label="Apple Books Library">
-              <svg class="app-icon books-icon" viewBox="0 0 512 512" aria-hidden="true">
-                <defs>
-                  <linearGradient id="apple-books-gradient" x1="87" y1="4" x2="431" y2="504" gradientUnits="userSpaceOnUse">
-                    <stop offset="0" stop-color="#ffb20f" />
-                    <stop offset="0.48" stop-color="#ff8a00" />
-                    <stop offset="1" stop-color="#ff551f" />
-                  </linearGradient>
-                  <linearGradient id="apple-books-page" x1="142" y1="113" x2="366" y2="385" gradientUnits="userSpaceOnUse">
-                    <stop offset="0" stop-color="#fffefa" />
-                    <stop offset="0.58" stop-color="#fff7e8" />
-                    <stop offset="1" stop-color="#ffe0c8" />
-                  </linearGradient>
-                  <filter id="apple-books-soft-shadow" x="-30%" y="-30%" width="160%" height="170%">
-                    <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#d84c0b" flood-opacity="0.38" />
-                  </filter>
-                </defs>
-                <rect x="3" y="3" width="506" height="506" rx="106" fill="url(#apple-books-gradient)" />
-                <rect x="64" y="146" width="384" height="238" rx="36" fill="#ffbd70" opacity="0.56" />
-                <g filter="url(#apple-books-soft-shadow)">
-                  <path d="M95 144c62 0 109 9 161 54v199c-52-46-99-55-161-55V144Z" fill="url(#apple-books-page)" />
-                  <path d="M417 144c-62 0-109 9-161 54v199c52-46 99-55 161-55V144Z" fill="url(#apple-books-page)" />
-                  <path d="M256 198v199" fill="none" stroke="#ffd9b8" stroke-width="3" />
-                </g>
-                <path d="M95 144c62 0 109 9 161 54 52-45 99-54 161-54" fill="none" stroke="#fff4da" stroke-linecap="round" stroke-width="7" opacity="0.9" />
-              </svg>
-            </a>
+            <div class="app-grid">
+              <a class="widget profile-widget" href="mailto:seoleunseo@nextgen.kr" aria-label="Email Eunseo Seol">
+                <span class="widget-kicker">Eunseo Seol</span>
+                <h1 id="home-title">Creator(Software) is Eating the World.</h1>
+                <p>Venture Partner at Primer<br />Former EO Studio Content PD</p>
+              </a>
+
+              <a class="app-link" href="https://threads.net/@eunseoseol" target="_blank" rel="noreferrer" aria-label="Threads">
+                <span class="app-icon-wrap threads-app">
+                  <svg class="line-app-icon threads-icon" viewBox="0 0 64 64" aria-hidden="true">
+                    <path d="M41.5 27.5c-.9-6.1-4.4-9.3-10.4-9.3-5.1 0-9 2.4-11.3 6.8" />
+                    <path d="M43.4 34.9c4.2 1.6 6.5 4.6 6.5 8.3 0 6.9-6.9 11.9-17 11.9-11.6 0-18.9-8.5-18.9-22 0-13.6 7.2-22.1 18.5-22.1 9.7 0 15.9 5.4 18 15.4" />
+                    <path d="M42.2 33.1c-.5 8.1-5 12.8-12.2 12.8-5.4 0-9-2.9-9-7.1 0-4.3 3.7-6.9 9.9-6.9 4 0 8 .6 11.3 1.2Z" />
+                  </svg>
+                </span>
+                <span class="app-label">Threads</span>
+              </a>
+
+              <a class="app-link" href="https://x.com/eunseo_seol" target="_blank" rel="noreferrer" aria-label="X">
+                <span class="app-icon-wrap x-app">X</span>
+                <span class="app-label">X</span>
+              </a>
+
+              <a class="app-link" href="https://linkedin.com/in/eunseo-seol" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                <svg class="app-icon-image" viewBox="0 0 512 512" aria-hidden="true">
+                  <rect width="512" height="512" rx="34" fill="#0a66c2" />
+                  <circle cx="107" cy="106" r="45" fill="#fff" />
+                  <path d="M67 187h81v260H67V187Zm128 0h78v35h1c11-20 38-41 78-41 84 0 99 55 99 127v139h-81V324c0-29-.5-67-41-67-41 0-47 32-47 65v125h-87V187Z" fill="#fff" />
+                </svg>
+                <span class="app-label">LinkedIn</span>
+              </a>
+
+              <a class="app-link" href="https://instagram.com/eunseoseol" target="_blank" rel="noreferrer" aria-label="Instagram">
+                <svg class="app-icon-image" viewBox="0 0 512 512" aria-hidden="true">
+                  <defs>
+                    <radialGradient id="instagram-yellow" cx="22%" cy="98%" r="72%">
+                      <stop offset="0" stop-color="#ffd76a" />
+                      <stop offset="0.28" stop-color="#ff9b35" />
+                      <stop offset="0.62" stop-color="#f53366" stop-opacity="0" />
+                    </radialGradient>
+                    <linearGradient id="instagram-gradient" x1="80" y1="18" x2="440" y2="492" gradientUnits="userSpaceOnUse">
+                      <stop offset="0" stop-color="#405de6" />
+                      <stop offset="0.34" stop-color="#833ab4" />
+                      <stop offset="0.64" stop-color="#e1306c" />
+                      <stop offset="1" stop-color="#fd1d1d" />
+                    </linearGradient>
+                  </defs>
+                  <rect width="512" height="512" rx="108" fill="url(#instagram-gradient)" />
+                  <rect width="512" height="512" rx="108" fill="url(#instagram-yellow)" />
+                  <rect x="88" y="88" width="336" height="336" rx="94" fill="none" stroke="#fff" stroke-width="36" />
+                  <circle cx="256" cy="256" r="74" fill="none" stroke="#fff" stroke-width="36" />
+                  <circle cx="352" cy="160" r="23" fill="#fff" />
+                </svg>
+                <span class="app-label">Instagram</span>
+              </a>
+
+              <a class="app-link" href="mailto:seoleunseo@nextgen.kr" aria-label="Email">
+                <span class="app-icon-wrap mail-app">
+                  <svg viewBox="0 0 64 64" aria-hidden="true">
+                    <rect x="9" y="15" width="46" height="34" rx="7" fill="#fff" />
+                    <path d="M13 20 32 34 51 20" fill="none" stroke="#71b9ff" stroke-linecap="round" stroke-width="5" />
+                  </svg>
+                </span>
+                <span class="app-label">Mail</span>
+              </a>
+
+              <a class="app-link" href="/book" aria-label="Apple Books Library">
+                <svg class="app-icon-image" viewBox="0 0 512 512" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="apple-books-gradient" x1="87" y1="4" x2="431" y2="504" gradientUnits="userSpaceOnUse">
+                      <stop offset="0" stop-color="#ffb20f" />
+                      <stop offset="0.48" stop-color="#ff8a00" />
+                      <stop offset="1" stop-color="#ff551f" />
+                    </linearGradient>
+                    <linearGradient id="apple-books-page" x1="142" y1="113" x2="366" y2="385" gradientUnits="userSpaceOnUse">
+                      <stop offset="0" stop-color="#fffefa" />
+                      <stop offset="0.58" stop-color="#fff7e8" />
+                      <stop offset="1" stop-color="#ffe0c8" />
+                    </linearGradient>
+                    <filter id="apple-books-soft-shadow" x="-30%" y="-30%" width="160%" height="170%">
+                      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#d84c0b" flood-opacity="0.38" />
+                    </filter>
+                  </defs>
+                  <rect x="3" y="3" width="506" height="506" rx="106" fill="url(#apple-books-gradient)" />
+                  <rect x="64" y="146" width="384" height="238" rx="36" fill="#ffbd70" opacity="0.56" />
+                  <g filter="url(#apple-books-soft-shadow)">
+                    <path d="M95 144c62 0 109 9 161 54v199c-52-46-99-55-161-55V144Z" fill="url(#apple-books-page)" />
+                    <path d="M417 144c-62 0-109 9-161 54v199c52-46 99-55 161-55V144Z" fill="url(#apple-books-page)" />
+                    <path d="M256 198v199" fill="none" stroke="#ffd9b8" stroke-width="3" />
+                  </g>
+                  <path d="M95 144c62 0 109 9 161 54 52-45 99-54 161-54" fill="none" stroke="#fff4da" stroke-linecap="round" stroke-width="7" opacity="0.9" />
+                </svg>
+                <span class="app-label">Books</span>
+              </a>
+
+              <a class="app-link" href="https://youtube.com/@eunseoseol" target="_blank" rel="noreferrer" aria-label="YouTube">
+                <span class="app-icon-wrap youtube-app">
+                  <svg viewBox="0 0 64 64" aria-hidden="true">
+                    <rect x="8" y="17" width="48" height="30" rx="9" fill="#ff0033" />
+                    <path d="M29 25v14l13-7-13-7Z" fill="#fff" />
+                  </svg>
+                </span>
+                <span class="app-label">YouTube</span>
+              </a>
+
+              <a class="app-link" href="https://facebook.com/eunseoseol" target="_blank" rel="noreferrer" aria-label="Facebook">
+                <span class="app-icon-wrap facebook-app">f</span>
+                <span class="app-label">Facebook</span>
+              </a>
+            </div>
+
+            <div class="search-pill" aria-hidden="true">Search</div>
+
+            <div class="home-dock" aria-label="Pinned links">
+              <a class="dock-app phone-app" href="mailto:seoleunseo@nextgen.kr" aria-label="Email Eunseo">
+                <svg viewBox="0 0 64 64" aria-hidden="true">
+                  <path d="M22 14c3 10 9 21 28 28l-6 10c-4 2-17-3-26-12S4 18 6 14l10-6 6 6Z" fill="#fff" />
+                </svg>
+              </a>
+              <a class="dock-app safari-app" href="https://nextgen.kr" target="_blank" rel="noreferrer" aria-label="NextGen">
+                <span>NG</span>
+              </a>
+              <a class="dock-app message-app" href="https://threads.net/@eunseoseol" target="_blank" rel="noreferrer" aria-label="Threads">
+                <span>@</span>
+              </a>
+              <a class="dock-app music-app" href="/book" aria-label="Books">
+                <span>♪</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
-
-      <section class="section intro-band" aria-label="Profile summary">
-        <div>
-          <span class="section-kicker">Profile</span>
-          <h2>Macro보다 Micro에 집중하는 운영자.</h2>
-        </div>
-        <p>
-          은서님은 Creator Economy와 Digital Media를 중요한 축으로 두고,
-          콘텐츠, 소프트웨어, 투자, 회사 운영이 만나는 지점을 탐구합니다.
-        </p>
-      </section>
-
-      <section class="section split-section" id="work" aria-labelledby="work-title">
-        <div class="section-heading">
-          <span class="section-kicker">Career</span>
-          <h2 id="work-title">현재 하는 일</h2>
-        </div>
-        <div class="timeline">
-          <article class="timeline-item">
-            <div class="timeline-date">Current</div>
-            <div>
-              <h3>Venture Partner · Primer / Founder & CEO · NextGen</h3>
-              <p>
-                Primer의 venture partner로 활동하며, NextGen의 방향, 팀 구조, 운영 시스템을
-                설계합니다. 이전에는 EO Studio에서 content PD로 일했습니다.
-              </p>
-              <ul>
-                <li>Mission: 차세대 크리에이터 학원을 만들자.</li>
-                <li>Thesis: Creator(Software) is Eating the World.</li>
-                <li>Focus: creator economy, digital media, software, venture, team system.</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section reading-section" id="reading" aria-labelledby="reading-title">
-        <div class="section-heading">
-          <span class="section-kicker">Reading</span>
-          <h2 id="reading-title">읽고 생각하는 분야</h2>
-          <p>
-            Family 페이지와 연결된 책장, 그리고 은서님의 생각 페이지에서 이어지는 관심사를
-            개인 사이트용으로 정리했습니다.
-          </p>
-        </div>
-        <div class="filter-bar" role="tablist" aria-label="Reading categories">
-          <button class="filter-button active" type="button" data-filter="all">All</button>
-          <button class="filter-button" type="button" data-filter="Space">Space</button>
-          <button class="filter-button" type="button" data-filter="AI">AI</button>
-          <button class="filter-button" type="button" data-filter="Humanity">Humanity</button>
-          <button class="filter-button" type="button" data-filter="VC">VC</button>
-          <button class="filter-button" type="button" data-filter="Startup">Startup</button>
-        </div>
-        <div class="book-grid" id="book-grid"></div>
-      </section>
-
-      <section class="section thoughts" id="thoughts" aria-labelledby="thoughts-title">
-        <div class="section-heading">
-          <span class="section-kicker">Thoughts</span>
-          <h2 id="thoughts-title">생각의 지도</h2>
-        </div>
-        <div class="thought-grid">
-          <article>
-            <span>01</span>
-            <h3>Creator Economy</h3>
-            <p>크리에이터가 배우고 성장하고 수익화하는 구조를 하나의 교육 시스템으로 봅니다.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Digital Media</h3>
-            <p>콘텐츠, 커뮤니티, 마케팅, 플랫폼의 연결을 사업의 핵심 운영 단위로 다룹니다.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Company System</h3>
-            <p>finance, legal, hiring, communication을 문서화하고 팀이 반복 가능한 방식으로 움직이게 합니다.</p>
-          </article>
-        </div>
-      </section>
     </main>
-
-    <footer class="footer" id="contact">
-      <div>
-        <span class="section-kicker">Contact</span>
-        <h2>은서님과 연결하기</h2>
-      </div>
-      <div class="contact-panel">
-        <div class="contact-links">
-          <a href="mailto:seoleunseo@nextgen.kr">seoleunseo@nextgen.kr</a>
-        </div>
-        <div class="social-grid" aria-label="Social media links">
-          <a href="https://threads.net/@eunseoseol" target="_blank" rel="noreferrer">
-            <span>Threads</span>
-            <strong>threads.net/@eunseoseol</strong>
-          </a>
-          <a href="https://x.com/eunseo_seol" target="_blank" rel="noreferrer">
-            <span>X</span>
-            <strong>x.com/eunseo_seol</strong>
-          </a>
-          <a href="https://facebook.com/eunseoseol" target="_blank" rel="noreferrer">
-            <span>Facebook</span>
-            <strong>facebook.com/eunseoseol</strong>
-          </a>
-          <a href="https://linkedin.com/in/eunseo-seol" target="_blank" rel="noreferrer">
-            <span>LinkedIn</span>
-            <strong>linkedin.com/in/eunseo-seol</strong>
-          </a>
-          <a href="https://instagram.com/eunseoseol" target="_blank" rel="noreferrer">
-            <span>Instagram</span>
-            <strong>instagram.com/eunseoseol</strong>
-          </a>
-          <a href="https://youtube.com/@eunseoseol" target="_blank" rel="noreferrer">
-            <span>YouTube</span>
-            <strong>youtube.com/@eunseoseol</strong>
-          </a>
-        </div>
-      </div>
-    </footer>
-
-    <script src="./script.js"></script>
   </body>
 </html>
