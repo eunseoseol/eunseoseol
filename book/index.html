@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eunseo Seol · Library</title>
+    <meta
+      name="description"
+      content="설은서의 책장. Creator Economy, Digital Media, Startup, AI, History를 중심으로 읽고 생각하는 책을 정리했습니다."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="book-page">
+    <header class="site-header book-header" data-elevated="true">
+      <a class="brand" href="/" aria-label="Eunseo Seol home">
+        <span class="brand-mark">ES</span>
+        <span>설은서</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/book">Library</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="book-hero" aria-labelledby="book-title">
+        <div>
+          <span class="section-kicker">Apple Books</span>
+          <h1 id="book-title">Eunseo's Library</h1>
+          <p>
+            Creator Economy, Digital Media, Startup, AI, History를 중심으로 읽고
+            생각하는 책과 메모를 모았습니다.
+          </p>
+        </div>
+        <a class="book-home-link" href="/">Back Home</a>
+      </section>
+
+      <section class="section reading-section book-library" id="reading" aria-labelledby="reading-title">
+        <div class="section-heading">
+          <span class="section-kicker">Reading</span>
+          <h2 id="reading-title">책장</h2>
+          <p>관심사별로 필터링해서 볼 수 있습니다.</p>
+        </div>
+        <div class="filter-bar" role="tablist" aria-label="Reading categories">
+          <button class="filter-button active" type="button" data-filter="all">All</button>
+          <button class="filter-button" type="button" data-filter="Creator Economy">Creator</button>
+          <button class="filter-button" type="button" data-filter="Digital Media">Media</button>
+          <button class="filter-button" type="button" data-filter="Startup">Startup</button>
+          <button class="filter-button" type="button" data-filter="AI">AI</button>
+          <button class="filter-button" type="button" data-filter="History">History</button>
+        </div>
+        <div class="book-grid" id="book-grid"></div>
+      </section>
+    </main>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
