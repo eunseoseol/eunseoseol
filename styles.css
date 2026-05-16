@@ -17,7 +17,7 @@ html {
 
 body {
   margin: 0;
-  font-family: Inter, "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Inter, "Noto Sans KR", "Segoe UI", sans-serif;
   color: var(--ink);
   background: #edf4f1;
 }
@@ -31,32 +31,35 @@ a {
   min-height: 100svh;
   overflow: hidden;
   background:
-    radial-gradient(circle at 18% 10%, rgba(255, 255, 255, 0.52), transparent 28%),
-    linear-gradient(135deg, #cfc7bc 0%, #778aa9 30%, #061438 62%, #020510 100%);
+    radial-gradient(circle at 50% 38%, rgba(255, 255, 255, 0.32), transparent 24%),
+    linear-gradient(135deg, #c7c7c7 0%, #b3b3b3 100%);
 }
 
 .iphone-stage {
   display: grid;
   min-height: 100svh;
   place-items: center;
-  padding: 14px;
+  padding: 16px;
 }
 
 .iphone-shell {
-  width: min(392px, 92vw, calc((100svh - 28px) * 0.462));
-  aspect-ratio: 392 / 846;
+  width: min(390px, 92vw, calc((100svh - 32px) * 0.462));
+  aspect-ratio: 390 / 844;
 }
 
 .iphone-hardware {
   width: 100%;
   height: 100%;
-  padding: 10px;
-  background: linear-gradient(145deg, #242528, #050608 58%, #2c2d30);
-  border: 3px solid #050608;
-  border-radius: 13.8% / 6.4%;
+  padding: 9px;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.18), transparent 7% 93%, rgba(255, 255, 255, 0.12)),
+    linear-gradient(145deg, #26272b, #050608 58%, #222326);
+  border: 2px solid #0a0b0d;
+  border-radius: 58px;
   box-shadow:
-    inset 0 0 0 2px rgba(255, 255, 255, 0.08),
-    0 28px 80px rgba(0, 0, 0, 0.42);
+    inset 0 0 0 1px rgba(255, 255, 255, 0.11),
+    inset 0 0 0 4px #17181b,
+    0 28px 70px rgba(0, 0, 0, 0.44);
 }
 
 .iphone-display {
@@ -66,14 +69,14 @@ a {
   height: 100%;
   overflow: hidden;
   color: #fff;
-  border-radius: 11.3% / 5.4%;
+  border-radius: 48px;
   background:
-    radial-gradient(ellipse at 22% 8%, rgba(244, 253, 255, 0.94) 0 12%, transparent 25%),
-    radial-gradient(ellipse at 50% 37%, rgba(114, 239, 203, 0.9) 0 18%, transparent 40%),
-    radial-gradient(ellipse at 78% 30%, rgba(15, 42, 107, 0.98) 0 18%, transparent 43%),
-    radial-gradient(ellipse at 22% 76%, rgba(0, 146, 167, 0.9) 0 20%, transparent 48%),
-    radial-gradient(ellipse at 82% 82%, rgba(69, 199, 255, 0.98) 0 17%, transparent 38%),
-    linear-gradient(145deg, #b8f0f0 0%, #53c9df 37%, #0e4db5 68%, #061144 100%);
+    radial-gradient(ellipse at 18% 20%, rgba(223, 250, 249, 0.96) 0 16%, transparent 37%),
+    radial-gradient(ellipse at 28% 58%, rgba(101, 232, 207, 0.92) 0 18%, transparent 46%),
+    radial-gradient(ellipse at 75% 18%, rgba(10, 30, 88, 0.98) 0 15%, transparent 36%),
+    radial-gradient(ellipse at 86% 70%, rgba(50, 190, 244, 0.96) 0 17%, transparent 40%),
+    radial-gradient(ellipse at 40% 94%, rgba(0, 36, 148, 0.92) 0 22%, transparent 50%),
+    linear-gradient(145deg, #d6f8f3 0%, #6adadd 34%, #2176d8 66%, #07124c 100%);
 }
 
 .iphone-display::before,
@@ -86,15 +89,16 @@ a {
 
 .iphone-display::before {
   background:
-    linear-gradient(118deg, transparent 0 42%, rgba(255, 255, 255, 0.38) 42.3% 58%, transparent 58.4%),
-    linear-gradient(305deg, transparent 0 48%, rgba(8, 18, 48, 0.4) 48.4% 59%, transparent 59.4%);
+    linear-gradient(118deg, transparent 0 40%, rgba(255, 255, 255, 0.44) 40.2% 55%, transparent 55.4%),
+    linear-gradient(300deg, transparent 0 47%, rgba(4, 15, 50, 0.34) 47.4% 58%, transparent 58.4%),
+    linear-gradient(32deg, transparent 0 52%, rgba(255, 255, 255, 0.2) 52.3% 64%, transparent 64.4%);
   mix-blend-mode: screen;
-  opacity: 0.65;
+  opacity: 0.72;
 }
 
 .iphone-display::after {
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14);
   border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14);
 }
 
 .status-bar {
@@ -104,9 +108,9 @@ a {
   align-items: center;
   justify-content: space-between;
   min-height: 44px;
-  padding: 12px 28px 0;
+  padding: 10px 28px 0;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .status-icons {
@@ -167,7 +171,7 @@ a {
   z-index: 4;
   top: 15px;
   left: 50%;
-  width: 112px;
+  width: 116px;
   height: 34px;
   background: #020304;
   border-radius: 999px;
@@ -189,11 +193,11 @@ a {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: min-content;
-  gap: min(2.4vh, 18px) 12px;
+  gap: 15px 13px;
   align-content: start;
-  padding: 22px 24px 0;
+  padding: 24px 25px 0;
 }
 
 .widget {
@@ -202,37 +206,44 @@ a {
   border-radius: 18px;
 }
 
-.profile-widget {
-  display: grid;
+.photo-widget {
+  position: relative;
+  display: block;
   grid-column: span 2;
   grid-row: span 2;
-  min-height: 136px;
-  padding: 15px;
-  background: rgba(20, 165, 239, 0.35);
-  border: 1px dashed rgba(28, 126, 184, 0.76);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.24);
-  backdrop-filter: blur(10px);
+  min-height: 128px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px dashed rgba(30, 125, 190, 0.72);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    0 8px 18px rgba(0, 47, 120, 0.14);
+  backdrop-filter: blur(6px);
 }
 
-.widget-kicker {
+.widget-frame {
+  display: block;
+  height: 82px;
+  background: rgba(24, 162, 238, 0.18);
+  border: 1px dashed rgba(15, 119, 190, 0.54);
+  border-radius: 11px;
+}
+
+.widget-name {
+  display: block;
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.78);
   font-size: 11px;
-  font-weight: 800;
-  opacity: 0.9;
+  font-weight: 600;
+  text-align: center;
 }
 
-.profile-widget h1 {
-  margin: 16px 0 8px;
-  font-size: 18px;
-  line-height: 1.1;
-  letter-spacing: 0;
-}
-
-.profile-widget p {
-  align-self: end;
-  margin: 0;
-  font-size: 10px;
-  line-height: 1.35;
-  opacity: 0.86;
+.photo-widget h1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
 }
 
 .app-link {
@@ -242,7 +253,7 @@ a {
   min-width: 0;
   color: #fff;
   text-align: center;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.36);
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
 }
 
 .app-icon-image,
@@ -253,7 +264,9 @@ a {
   place-items: center;
   overflow: hidden;
   border-radius: 14px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    0 5px 12px rgba(0, 0, 0, 0.16);
 }
 
 .app-icon-wrap {
@@ -265,27 +278,80 @@ a {
   max-width: 68px;
   overflow: hidden;
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.15;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.threads-app {
-  background: #050505;
+.facetime-app {
+  background: linear-gradient(180deg, #61ed75, #11bf45);
 }
 
-.line-app-icon {
-  width: 39px;
-  height: 39px;
+.facetime-app svg,
+.mail-app svg,
+.youtube-app svg,
+.phone-app svg {
+  width: 100%;
+  height: 100%;
 }
 
-.threads-icon {
-  fill: none;
-  stroke: #fff;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 5;
+.calendar-app {
+  align-content: center;
+  gap: 0;
+  color: #111;
+  background: #fff;
+  font-weight: 700;
+}
+
+.calendar-app span {
+  color: #ff3b30;
+  font-size: 9px;
+  line-height: 1;
+}
+
+.calendar-app strong {
+  font-size: 29px;
+  font-weight: 500;
+  line-height: 0.98;
+}
+
+.photos-app {
+  position: relative;
+  background: #fff;
+}
+
+.petal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 24px;
+  border-radius: 999px;
+  transform-origin: 50% 29px;
+}
+
+.p1 { background: #ff3b30; transform: translate(-50%, -29px) rotate(0deg); }
+.p2 { background: #ff9500; transform: translate(-50%, -29px) rotate(45deg); }
+.p3 { background: #ffcc00; transform: translate(-50%, -29px) rotate(90deg); }
+.p4 { background: #34c759; transform: translate(-50%, -29px) rotate(135deg); }
+.p5 { background: #00c7be; transform: translate(-50%, -29px) rotate(180deg); }
+.p6 { background: #007aff; transform: translate(-50%, -29px) rotate(225deg); }
+.p7 { background: #5856d6; transform: translate(-50%, -29px) rotate(270deg); }
+.p8 { background: #ff2d55; transform: translate(-50%, -29px) rotate(315deg); }
+
+.camera-app {
+  background:
+    radial-gradient(circle at 50% 50%, #0d1322 0 16%, #2b5a95 17% 27%, #0d1322 28% 36%, transparent 37%),
+    radial-gradient(circle at 47% 43%, #f2fbff 0 6%, transparent 8%),
+    linear-gradient(145deg, #e8eef7, #1e2740 44%, #0b1122);
+}
+
+.camera-app span {
+  width: 25px;
+  aspect-ratio: 1;
+  border: 4px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
 }
 
 .x-app {
@@ -293,14 +359,7 @@ a {
 }
 
 .mail-app {
-  background: linear-gradient(180deg, #71c9ff, #2794ec);
-}
-
-.mail-app svg,
-.youtube-app svg,
-.phone-app svg {
-  width: 100%;
-  height: 100%;
+  background: linear-gradient(180deg, #78d1ff, #168af2);
 }
 
 .youtube-app {
@@ -317,14 +376,22 @@ a {
   line-height: 0.82;
 }
 
+.appstore-app {
+  color: #fff;
+  background: linear-gradient(180deg, #39b8ff, #007aff);
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 33px;
+  font-weight: 600;
+}
+
 .search-pill {
   position: relative;
   z-index: 2;
   justify-self: center;
   margin: 12px 0 9px;
-  padding: 6px 14px;
+  padding: 5px 15px;
   color: rgba(255, 255, 255, 0.86);
-  background: rgba(15, 92, 155, 0.38);
+  background: rgba(25, 116, 183, 0.34);
   border-radius: 999px;
   font-size: 11px;
   backdrop-filter: blur(18px);
@@ -339,14 +406,16 @@ a {
   z-index: 2;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 13px;
-  margin: 0 18px 18px;
+  gap: 12px;
+  margin: 0 17px 17px;
   padding: 10px;
-  background: rgba(255, 255, 255, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 28px;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.24);
-  backdrop-filter: blur(22px);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 30px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    0 -8px 28px rgba(0, 63, 180, 0.2);
+  backdrop-filter: blur(28px) saturate(1.6);
 }
 
 .dock-app {
@@ -357,7 +426,9 @@ a {
   color: #fff;
   border-radius: 15px;
   font-weight: 800;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    0 5px 12px rgba(0, 0, 0, 0.16);
 }
 
 .phone-app {
@@ -645,8 +716,8 @@ a {
 
   .iphone-hardware {
     padding: 8px;
+    border: 0;
     border-radius: 0;
-    border-width: 0;
   }
 
   .iphone-display {
@@ -664,7 +735,7 @@ a {
     border-radius: 13px;
   }
 
-  .profile-widget {
+  .photo-widget {
     min-height: 128px;
   }
 
