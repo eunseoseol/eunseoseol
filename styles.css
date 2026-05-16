@@ -492,10 +492,10 @@ a {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
   justify-self: center;
-  width: min(156px, calc(100% - 34px));
+  width: min(222px, calc(100% - 34px));
   margin: 0 17px 17px;
   padding: 10px;
   background: rgba(255, 255, 255, 0.2);
