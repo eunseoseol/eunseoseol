@@ -379,6 +379,15 @@ a {
   background: #fff;
 }
 
+.github-app {
+  background: linear-gradient(180deg, #151b22, #020407);
+}
+
+.github-app svg {
+  width: 100%;
+  height: 100%;
+}
+
 .facebook-app {
   align-items: end;
   color: #fff;
