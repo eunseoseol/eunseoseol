@@ -345,7 +345,8 @@ a {
 
 .threads-app svg,
 .instagram-app svg,
-.mail-app svg,
+.notion-mail-app svg,
+.notion-calendar-app svg,
 .apple-music-app svg,
 .phone-app svg {
   width: 100%;
@@ -424,8 +425,11 @@ a {
   height: 82%;
 }
 
-.mail-app {
-  background: linear-gradient(180deg, #78d1ff, #168af2);
+.notion-mail-app,
+.notion-calendar-app {
+  color: #111;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .forbes-app {
