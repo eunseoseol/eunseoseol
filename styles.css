@@ -363,6 +363,11 @@ a {
   background: #101010;
 }
 
+.x-app svg {
+  width: 82%;
+  height: 82%;
+}
+
 .mail-app {
   background: linear-gradient(180deg, #78d1ff, #168af2);
 }
