@@ -208,34 +208,33 @@ a {
 
 .photo-widget {
   position: relative;
-  display: block;
+  display: grid;
   grid-column: span 2;
   grid-row: span 2;
   min-height: 128px;
-  padding: 10px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px dashed rgba(30, 125, 190, 0.72);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.22),
-    0 8px 18px rgba(0, 47, 120, 0.14);
-  backdrop-filter: blur(6px);
+  gap: 7px;
+  align-content: start;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }
 
-.widget-frame {
+.widget-photo {
   display: block;
-  height: 82px;
-  background: rgba(24, 162, 238, 0.18);
-  border: 1px dashed rgba(15, 119, 190, 0.54);
-  border-radius: 11px;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 22px;
+  box-shadow: 0 9px 22px rgba(0, 0, 0, 0.22);
 }
 
 .widget-name {
   display: block;
-  margin-top: 8px;
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 11px;
-  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 14px;
+  font-weight: 700;
   text-align: center;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.42);
 }
 
 .photo-widget h1 {
