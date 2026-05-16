@@ -318,27 +318,40 @@ a {
 
 .photos-app {
   position: relative;
-  background: #fff;
+  background: linear-gradient(180deg, #fff, #f2f2f4);
 }
 
 .petal {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 15px;
-  height: 24px;
-  border-radius: 999px;
-  transform-origin: 50% 29px;
+  width: 21px;
+  height: 30px;
+  border-radius: 999px 999px 9px 9px;
+  opacity: 0.82;
+  transform-origin: 50% 34px;
 }
 
-.p1 { background: #ff3b30; transform: translate(-50%, -29px) rotate(0deg); }
-.p2 { background: #ff9500; transform: translate(-50%, -29px) rotate(45deg); }
-.p3 { background: #ffcc00; transform: translate(-50%, -29px) rotate(90deg); }
-.p4 { background: #34c759; transform: translate(-50%, -29px) rotate(135deg); }
-.p5 { background: #00c7be; transform: translate(-50%, -29px) rotate(180deg); }
-.p6 { background: #007aff; transform: translate(-50%, -29px) rotate(225deg); }
-.p7 { background: #5856d6; transform: translate(-50%, -29px) rotate(270deg); }
-.p8 { background: #ff2d55; transform: translate(-50%, -29px) rotate(315deg); }
+.photos-app::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 17px;
+  aspect-ratio: 1;
+  content: "";
+  background: #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p1 { background: #ff3b30; transform: translate(-50%, -34px) rotate(0deg); }
+.p2 { background: #ff9500; transform: translate(-50%, -34px) rotate(45deg); }
+.p3 { background: #fff12b; transform: translate(-50%, -34px) rotate(90deg); }
+.p4 { background: #7ed321; transform: translate(-50%, -34px) rotate(135deg); }
+.p5 { background: #00a889; transform: translate(-50%, -34px) rotate(180deg); }
+.p6 { background: #007aff; transform: translate(-50%, -34px) rotate(225deg); }
+.p7 { background: #af52de; transform: translate(-50%, -34px) rotate(270deg); }
+.p8 { background: #ff2d55; transform: translate(-50%, -34px) rotate(315deg); }
 
 .camera-app {
   background:
@@ -445,8 +458,12 @@ a {
 }
 
 .music-app {
-  background: linear-gradient(145deg, #ff6d8b, #ff1f4f);
-  font-size: 26px;
+  background: #fa2d55;
+}
+
+.music-app svg {
+  width: 72%;
+  height: 72%;
 }
 
 .book-page {
