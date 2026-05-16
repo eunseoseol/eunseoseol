@@ -346,7 +346,7 @@ a {
 .threads-app svg,
 .instagram-app svg,
 .mail-app svg,
-.youtube-app svg,
+.apple-music-app svg,
 .phone-app svg {
   width: 100%;
   height: 100%;
@@ -426,10 +426,6 @@ a {
 
 .mail-app {
   background: linear-gradient(180deg, #78d1ff, #168af2);
-}
-
-.youtube-app {
-  background: #fff;
 }
 
 .forbes-app {
@@ -532,13 +528,13 @@ a {
   height: 82%;
 }
 
-.ytmusic-app {
-  background: #fff;
+.apple-music-app {
+  background: #fa2d55;
 }
 
-.ytmusic-app svg {
-  width: 84%;
-  height: 84%;
+.apple-music-app svg {
+  width: 72%;
+  height: 72%;
 }
 
 .book-page {
